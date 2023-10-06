@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    background: rgb(246, 248, 252);
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    z-index: 99999;
+    border-bottom: 1px solid #dadce0;
+    height: 48px;
+}
+
+.header img {
+    height: 2rem;
+    margin-right: 2rem;
+}
+
+h1 {
+    margin: 0;
+    color: rgb(95, 99, 104);
+    font-size: 22px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 500;
+    padding-left: 2rem;
+}
+
+h1 > span {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+
+}
+
+#articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#articles > div:first-child {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+#articles > div:last-child {
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.divider {
+    background-color: rgb(227, 227, 227);
+    width: 100%;
+    margin-top: 2rem; /* Add margin-top to separate articles */
+}
+
+.article {
+    display: flex;
+    flex-direction: column; /* Change to column direction */
+    background-color: white;
+    padding: 0 2rem 2rem;
+    width: 840px;
+}
+
+.article:first-of-type {
+    padding-top: 2rem;
+}
+
+.article-row {
+    display: flex; /* New flex container for image and content */
+    gap: 1.5rem;
+}
+
+.article-image {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+    order: 2;
+}
+
+.article-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+.article h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: #1f1f1f;
+    max-width: 80%;
+}
+
+.article a {
+    color: black;
+    text-decoration: none;
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+.publication-date {
+    margin: 0;
+    color: rgb(68, 71, 70);
+    font-size: 12px;
+}
+
+#dialog-overlay-condition, #dialog-overlay-session, #dialog-overlay-interaction, #dialog-overlay-reload {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the dialog box */
+.dialog-box {
+    width: 80rem;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the buttons */
+.dialog-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.dialog-button-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.dialog-button-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+plasmo-csui {
+    z-index: 1;
+}
+
+#mask {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999; /* some high z-index */
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    user-select: none; /* prevents double clicking from highlighting entire page */
+    pointer-events: none !important;
+    background: #f0f0f0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100vh;
+    font-size: 50px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

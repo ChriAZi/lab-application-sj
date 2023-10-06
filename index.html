@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>News Feed</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="scripts/loadArticles.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/firestore.js"></script>
+</head>
+<body>
+<div class="header">
+    <h1>
+        Definitely not&nbsp;&nbsp;<img src="./assets/Google_News_2015.webp" alt="Google News Logo"
+                                       style="vertical-align: middle;">
+    </h1>
+    <img src="./assets/Profile_avatar_placeholder_large.png" alt="Profile image"
+         style="border-radius: 100%; margin-left: auto;">
+</div>
+
+<div id="mask">
+    Do NOT interact with the system yet! Wait for the supervisor!
+</div>
+<main id="articles">
+</main>
+
+<div id="dialog-overlay-condition">
+    <div class="dialog-box">
+        <p>Which condition should be loaded?</p>
+        <button class="dialog-button dialog-button-primary condition">A</button>
+        <button class="dialog-button dialog-button-secondary condition">B</button>
+    </div>
+</div>
+<div id="dialog-overlay-session">
+    <div class="dialog-box">
+        <p>Do only click the button if the supervisor told you so.</p>
+        <button class="dialog-button dialog-button-primary session">Start Session</button>
+    </div>
+</div>
+<div id="dialog-overlay-interaction">
+    <div class="dialog-box">
+        <p>Your interaction time is up. Please click the button below to return to the questionnaire.</p>
+        <button class="dialog-button dialog-button-primary interaction">Open questionnaire</button>
+    </div>
+</div>
+<div id="dialog-overlay-reload">
+    <div class="dialog-box">
+        <p>ONLY FOR SUPERVISOR: Do you want to reload the page? </p>
+        <button class="dialog-button dialog-button-primary reload">Reload page</button>
+        <button class="dialog-button dialog-button-secondary reload">No!</button>
+    </div>
+</div>
+</body>
+</html>
+
